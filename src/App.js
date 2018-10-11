@@ -17,7 +17,7 @@ class App extends Component {
 
     this.state = { albums: [] };
 
-    this.discogsSearch("Louis Sommer");
+    // this.discogsSearch("Louis Sommer");
 
   }
 
@@ -30,11 +30,14 @@ class App extends Component {
   }
 
   render() {
+
+    const throttledSearch = _.debounce((term) => { this.discogsSearch(term) }, 500);
+
     return (
       <div className="App">
         <div className="container">
           <Title />
-          <SearchBar />
+          <SearchBar onSearchTermChange={throttledSearch} />
           <AlbumsList albums={this.state.albums} />
         </div>
       </div>

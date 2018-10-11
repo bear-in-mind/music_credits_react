@@ -18,8 +18,54 @@
   color: white;
 }
 
+.search input {
+  padding: 8px;
+  border-radius: 10px;
+  border: solid 1px #aaa;
+  width: 20%;
+}
+
+.search {
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
 .App-link {
   color: #61dafb;
+}
+
+.album-card h5 {
+  padding-top: 3px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.album-card img {
+  width: 130px;
+  height: 130px;
+  padding: 5px;
+}
+
+.album-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein 2s; /* Firefox < 16 */
+      -ms-animation: fadein 2s; /* Internet Explorer */
+       -o-animation: fadein 2s; /* Opera < 12.1 */
+          animation: fadein 2s;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: wrap;
 }
 
 @keyframes App-logo-spin {
@@ -29,4 +75,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }

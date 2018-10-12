@@ -21,6 +21,8 @@ class App extends Component {
 
   discogsSearch(term) {
     const db = new Discogs({userToken: DISCOGS_KEY}).database();
+    const results = document.querySelector(".card.results");
+    term === "" ? results.style.display = "none" : results.style.display = "flex";
     return db.search(term)
       .then(data => data.results[0].id)
       .then(id => db.getArtistReleases(id))
@@ -38,9 +40,10 @@ class App extends Component {
             <Title />
             <SearchBar onSearchTermChange={throttledSearch} />
           </div>
-        </div>
-        <div className="container">
-          <AlbumsList albums={this.state.albums} artist={this.state.query} />
+          <div className="card results">
+            <h3>Here are {this.state.query}'s recordings :</h3>
+            <AlbumsList albums={this.state.albums} />
+          </div>
         </div>
       </div>
     );

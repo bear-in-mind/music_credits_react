@@ -12,17 +12,11 @@ const AlbumsList = (props) => {
 
   console.log(albumItems);
 
-  if (props.artist && props.albums) {
-    return(
-      <div className="results">
-        <h3>Here are {props.artist}'s recordings :</h3>
-        <div className="list">
-          {albumItems}
-        </div>
+  return(
+      <div className="list">
+        {albumItems}
       </div>
-    );
-  }
-  return null;
+  );
 }
 
 

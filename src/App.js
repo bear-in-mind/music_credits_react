@@ -15,9 +15,7 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { albums: [] };
-
-    // this.discogsSearch("Louis Sommer");
+    this.state = { albums: [], query: "" };
 
   }
 
@@ -26,7 +24,7 @@ class App extends Component {
     return db.search(term)
       .then(data => data.results[0].id)
       .then(id => db.getArtistReleases(id))
-      .then(albums => this.setState({ albums: albums.releases }))
+      .then(albums => this.setState({ albums: albums.releases, query: term }))
   }
 
   render() {
@@ -35,17 +33,19 @@ class App extends Component {
 
     return (
       <div className="App">
+        <div className="banner">
+          <div className="card header">
+            <Title />
+            <SearchBar onSearchTermChange={throttledSearch} />
+          </div>
+        </div>
         <div className="container">
-          <Title />
-          <SearchBar onSearchTermChange={throttledSearch} />
-          <AlbumsList albums={this.state.albums} />
+          <AlbumsList albums={this.state.albums} artist={this.state.query} />
         </div>
       </div>
     );
   }
 
 }
-
-
 
 export default App;

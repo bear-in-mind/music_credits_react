@@ -4,30 +4,62 @@
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  margin: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.banner {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://source.unsplash.com/lEOogB2xh1M/1600x900");
+  background-size: cover;
+  background-size: no-repeat;
 }
 
 .search input {
   padding: 8px;
   border-radius: 10px;
   border: solid 1px #aaa;
-  width: 20%;
+/*  width: 20%;
+*/}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 65px;
 }
 
 .search {
-  padding-top: 5px;
+  padding-top: 10px;
   padding-bottom: 15px;
+}
+
+.card {
+  border: solid 2px black;
+  width: 40%;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.94);
+}
+
+.header {
+  margin: 20px;
+  width: 40%;
+}
+
+.header h2 {
+  font-size: 25px;
+  font-weight: lighter;
 }
 
 .App-link {
@@ -50,10 +82,10 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   width: 200px;
   height: 200px;
-  margin: 10px;
+  margin: 20px;
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
      -moz-animation: fadein 2s; /* Firefox < 16 */
       -ms-animation: fadein 2s; /* Internet Explorer */
@@ -66,6 +98,18 @@
   align-items: center;
   justify-content: start;
   flex-wrap: wrap;
+  width: 88%;
+}
+
+.results h3 {
+  font-weight: 400;
+}
+
+.results {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 @keyframes App-logo-spin {

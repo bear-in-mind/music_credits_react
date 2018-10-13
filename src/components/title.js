@@ -9,11 +9,13 @@ export default function Title() {
           src={logo}
           alt="vynil"
           className="App-logo"
+          id="logo-left"
           height="50px"
           width="50px"/>
         <img
           src={logo}
           alt="vynil"
+          id="logo-right"
           className="App-logo"
           height="50px"
           width="50px"/>

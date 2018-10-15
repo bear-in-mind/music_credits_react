@@ -7,13 +7,15 @@
     "disconnect": "^1.2.1",
     "jquery": "^3.3.1",
     "lodash": "^4.17.11",
+    "node-sass": "^4.9.3",
     "popper.js": "^1.14.4",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-scripts": "2.0.4"
+    "react-scripts": "2.0.4",
+    "spotify-web-api-js": "^1.1.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "REACT_APP_DISCOGS_KEY=XBfovZdRndqwiqiMrnDiLhUQIKsyVHCigShEfits react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

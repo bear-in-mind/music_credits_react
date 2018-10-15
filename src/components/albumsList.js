@@ -1,5 +1,6 @@
 import React from "react";
 import Album from './album';
+// import SpotifyPlayer from "./spotify_player"
 import _ from 'lodash';
 
 const AlbumsList = (props) => {

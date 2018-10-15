@@ -85,6 +85,11 @@ body {
   font-weight: lighter;
 }
 
+.role {
+  font-weight: lighter;
+  color: rgba(130, 130, 130, 1);
+}
+
 .App-link {
   color: #61dafb;
 }
@@ -112,6 +117,10 @@ body {
   /*-webkit-animation: fadein 2s;
      -moz-animation: fadein 2s;
           animation: fadein 2s;*/
+}
+
+.album-card :hover {
+  cursor: pointer;
 }
 
 .list {
